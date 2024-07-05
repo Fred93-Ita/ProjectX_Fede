@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Ordina nomi</title>
+</head>
+<body>
+
+ <!– Creazione pulsante inserisci nomi –>`
+ <form method="POST">
+    Inserisci nome:<input type="text" name="nome">
+    <button type="submit" value="salva" name="action1">salva</button>
+  </form>
+
+ <!– Creazione pulsante ordina –>`
+  <form method="POST">
+    <button type="submit" value="ordina" name="action2">ordina</button>
+  </form>
+<ul>
+{% for nome in nomi_li %}
+	<li>{{nome}}</li>
+{% endfor %}
+</ul>
+  <h2>Nomi ordinati dalla a alla z:</h2>
+<ul>
+{% for nome in nomi_ord %}
+	<li>{{nome}}</li>
+{% endfor %}
+</ul>
+
+  <form method="POST">
+    <button type="submit" value="cancella" name="action3">cancella</button>
+  </form>
+
+</body>
+</html>
